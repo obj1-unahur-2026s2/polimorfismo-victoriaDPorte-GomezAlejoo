@@ -2,3 +2,39 @@ import atletas.*
 import elementos.*
 import disciplinas.*
 
+
+describe "Victoria Pareto"{
+    test "Victoria mide lo mismo que Pareto" {
+        victoria.cambiarAltura(150)
+        assert.equals(150,victoria.altura())
+    }
+    test "Victoria practica judo"{
+        victoria.cambiarDisciplina(judo)
+        assert.equals(judo,victoria.disciplinaActual())
+    }
+
+    test "Victoria tiene un judogi"{
+        victoria.cambiarElemento(judogi)
+        assert.equals(judogi,victoria.elemento())
+    }
+}
+
+describe "Victoria Delpo"{
+    test "Victoria mide lo mismo que Delpo" {
+        victoria.cambiarAltura(210)
+        assert.equals(210,victoria.altura())
+    }
+    test "Victoria practica tenis"{
+        assert.equals(tenis,victoria.disciplinaActual())
+    }
+    test "Victoria tiene una raqueta"{
+        assert.equals(raqueta,victoria.elemento())
+    }
+    test "Victoria tiene 2 entrenadores"{
+        victoria.cambiarEntrenadores(2)
+        assert.equals(2,victoria.entrenadores())
+    }
+}
+
+
+
